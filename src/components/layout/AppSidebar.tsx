@@ -27,16 +27,6 @@ import { cn } from "@/lib/utils";
 
 const navigationItems = [
   {
-    title: "Dashboard",
-    path: "/dashboard",
-    icon: Home,
-  },
-  {
-    title: "Test Cases",
-    path: "/test-cases",
-    icon: Files,
-  },
-  {
     title: "Optimize Tests",
     path: "/",
     icon: FileSpreadsheet,
@@ -45,6 +35,16 @@ const navigationItems = [
     title: "Analysis",
     path: "/analysis",
     icon: BarChart2,
+  },
+  {
+    title: "Test Cases",
+    path: "/test-cases",
+    icon: Files,
+  },
+  {
+    title: "Dashboard",
+    path: "/dashboard",
+    icon: Home,
   },
   {
     title: "Version Control",
