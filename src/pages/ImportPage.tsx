@@ -28,7 +28,7 @@ const ImportPage = () => {
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Import Test Cases</h1>
+            <h1 className="text-3xl font-bold tracking-tight">Optimize Tests</h1>
             <p className="text-muted-foreground mt-1">
               Upload your existing test cases from Excel files or external systems
             </p>

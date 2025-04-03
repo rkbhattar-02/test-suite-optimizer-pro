@@ -28,7 +28,7 @@ import { cn } from "@/lib/utils";
 const navigationItems = [
   {
     title: "Dashboard",
-    path: "/",
+    path: "/dashboard",
     icon: Home,
   },
   {
@@ -37,8 +37,8 @@ const navigationItems = [
     icon: Files,
   },
   {
-    title: "File Import",
-    path: "/import",
+    title: "Optimize Tests",
+    path: "/",
     icon: FileSpreadsheet,
   },
   {
