@@ -126,9 +126,9 @@ const getStatusVariant = (status: string) => {
 
 const TestCaseTable = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedModule, setSelectedModule] = useState("");
-  const [selectedPriority, setSelectedPriority] = useState("");
-  const [selectedStatus, setSelectedStatus] = useState("");
+  const [selectedModule, setSelectedModule] = useState("all");
+  const [selectedPriority, setSelectedPriority] = useState("all");
+  const [selectedStatus, setSelectedStatus] = useState("all");
   const [selectedRows, setSelectedRows] = useState<string[]>([]);
 
   // Filter test cases based on search query and filters
@@ -139,13 +139,13 @@ const TestCaseTable = () => {
       testCase.id.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesModule =
-      selectedModule === "" || testCase.module === selectedModule;
+      selectedModule === "all" || testCase.module === selectedModule;
 
     const matchesPriority =
-      selectedPriority === "" || testCase.priority === selectedPriority;
+      selectedPriority === "all" || testCase.priority === selectedPriority;
 
     const matchesStatus =
-      selectedStatus === "" || testCase.status === selectedStatus;
+      selectedStatus === "all" || testCase.status === selectedStatus;
 
     return matchesSearch && matchesModule && matchesPriority && matchesStatus;
   });
@@ -195,7 +195,7 @@ const TestCaseTable = () => {
                 <SelectValue placeholder="All Modules" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Modules</SelectItem>
+                <SelectItem value="all">All Modules</SelectItem>
                 {modules.map((module) => (
                   <SelectItem key={module} value={module}>
                     {module}
@@ -211,7 +211,7 @@ const TestCaseTable = () => {
                 <SelectValue placeholder="All Priorities" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Priorities</SelectItem>
+                <SelectItem value="all">All Priorities</SelectItem>
                 {priorities.map((priority) => (
                   <SelectItem key={priority} value={priority}>
                     {priority}
@@ -227,7 +227,7 @@ const TestCaseTable = () => {
                 <SelectValue placeholder="All Statuses" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Statuses</SelectItem>
+                <SelectItem value="all">All Statuses</SelectItem>
                 {statuses.map((status) => (
                   <SelectItem key={status} value={status}>
                     {status}
